@@ -26,4 +26,9 @@ This pattern makes Sagas incredibly easy to test, as a simple assertion is all t
 
 ---
 
-##
+## Channels
+
+The above effects can be composed to create complex data flows. Taking actions dispatched to the store, and then performing some logic. However, sometimes we want this pattern to be possible outside of only store actions. This is possible with Channels. Channels can be used to communicate between a Saga and some other data producer/consumer, or even another Saga.
+
+These channels react the same using the effects above, however can allow for things like buffering incoming actions to be processed synchronously later, or using the channel factory to attach a channel to an external data source, such as a websocket stream.
+

@@ -1,7 +1,7 @@
 # Sagas are Generators, but special
-Sagas are generator functions. generator functions are functions which hold state. They do not run until completion. Sagas are incredibly useful for describing business logic and complicated control flows throughout our applications. They handle both synchronous and asynchronous logic easily and intuitively, once you are familiar with their mechanisms.
+Sagas are generator functions. Generator functions are functions which hold state. They do not run until completion. Sagas are incredibly useful for describing business logic and complicated control flows throughout our applications. They handle both synchronous and asynchronous logic easily and intuitively, once you are familiar with their mechanisms.
 
-A descriptive snippet from the Redux-Saga readme: "The mental model is that a saga is like a separate thread in your application that's solely responsible for side effects. redux-saga is a redux middleware, which means this thread can be started, paused and cancelled from the main application with normal redux actions, it has access to the *full redux application state and it can dispatch redux actions as well*."
+A descriptive snippet from the Redux-Saga readme: "The mental model is that a saga is like a separate thread in your application that's solely responsible for side effects. Redux-Saga is a redux middleware, which means this thread can be started, paused and cancelled from the main application with normal redux actions, it has access to the *full redux application state and it can dispatch redux actions as well*."
 
 I like to point out that Sagas have access to the state, and also dispatch methods on the store. This allows them to tie in closely with actions coming from elsewhere in your application, and also make decisions based on data present in the Redux store.
 
@@ -47,7 +47,7 @@ If the value argument is passed, it will be set to the value key in the return o
 ## throw()
 
 ```
-throw<T>(exception: T) -> { done: boolean, value?: T)
+throw<T>(exception: T) -> { done: boolean, value?: T }
   where T: instanceof Error
 ```
 

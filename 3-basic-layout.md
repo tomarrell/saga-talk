@@ -50,13 +50,13 @@ function* handleLogin(action) {
     // Check user is valid
     yield put(loginSuccess(user))
   } catch (e) {
-    put(loginFailure())
+    put(loginFailure('Failed to login, please try again later'))
   }
 }
 
 function* authSagas() {
   yield all([
-    takeEvery(SUBMIT_LOGIN, handleLogin),
+    takeLatest(SUBMIT_LOGIN, handleLogin),
   ])
 }
 
